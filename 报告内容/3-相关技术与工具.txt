@@ -1,0 +1,16 @@
+3 相关技术与工具
+
+3.1 选取的 LLM / AI API
+
+本实验选择DeepSeek作为代码生成的AI API服务。DeepSeek是深度求索公司开发的大语言模型服务，提供简洁易用的RESTful API接口，支持代码生成、对话等多种功能。DeepSeek API的主要特点包括：（1）支持中文语境下的代码生成，对中文Prompt理解准确；（2）API接口简洁，基于HTTP POST请求，返回JSON格式数据；（3）代码生成质量高，生成的代码具有良好的可读性和逻辑完整性。
+
+DeepSeek API的版本为v1，API端点为https://api.deepseek.com/v1/chat/completions。使用前需要在DeepSeek平台注册账号并获取API Key。API调用需要设置Authorization请求头，格式为"Bearer {API_KEY}"。请求体采用JSON格式，包含model（模型名称，使用"deepseek-chat"）、messages（对话消息数组）、temperature（温度参数，控制生成随机性，建议0.7）和max_tokens（最大生成token数，建议1000）等参数。响应体同样为JSON格式，通过choices数组中的message.content字段获取生成的代码内容。
+
+3.2 JavaFX 开发环境
+
+本实验使用JavaFX 21作为GUI开发框架，开发环境配置如下：（1）JDK版本：OpenJDK 25（最低要求Java 11+），用于编译和运行JavaFX应用；（2）构建工具：Apache Maven 3.9.11，用于依赖管理和项目构建；（3）IDE：支持Java开发的IDE均可，如IntelliJ IDEA、Eclipse等。JavaFX 21采用模块化设计，需要通过--module-path指定JavaFX模块位置，使用--add-modules添加所需模块（如javafx.controls、javafx.fxml）。Maven配置中需要添加JavaFX依赖，groupId为org.openjfx，artifactId包括javafx-controls和javafx-fxml，版本均为21。由于JavaFX从11版本开始需要单独下载，Maven会自动下载对应平台的native库（如mac-aarch64、win-x64等）。
+
+3.3 其它辅助库
+
+本实验还使用了以下辅助库：（1）OkHttp 4.12.0：用于发送HTTP请求调用DeepSeek API，提供同步和异步调用方式，支持连接超时和读取超时设置（本实验设置为30秒和60秒）；（2）Gson 2.10.1：用于JSON数据的序列化和反序列化，将Java对象转换为JSON请求体，并解析API返回的JSON响应；（3）JUnit 5.10.1：用于单元测试（本实验中主要用于代码质量验证）。这些库均通过Maven管理，在pom.xml中声明依赖后，Maven会自动下载。OkHttp和Gson的使用示例：创建OkHttpClient实例配置超时参数，使用Gson构建JSON请求体，通过Request.Builder创建HTTP请求并执行，最后使用Gson解析响应JSON获取生成的代码内容。
+

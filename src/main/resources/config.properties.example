@@ -1,0 +1,7 @@
+# DeepSeek API 配置示例
+# 复制此文件为 config.properties 并填入你的API Key
+deepseek.api.key=your-api-key-here
+deepseek.api.url=https://api.deepseek.com/v1/chat/completions
+
+
+

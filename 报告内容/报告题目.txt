@@ -1,0 +1,25 @@
+报告题目选项：
+
+1. 基于DeepSeek API的JavaFX代码生成研究与实践
+
+2. 基于DeepSeek的AI辅助JavaFX开发研究——以五子棋游戏为例
+
+3. 基于DeepSeek API的JavaFX智能代码生成系统设计与实现
+
+4. AI辅助编程在JavaFX开发中的应用研究——基于DeepSeek API
+
+5. 基于DeepSeek API的JavaFX代码自动生成技术研究
+
+推荐题目（最符合报告内容）：
+
+基于DeepSeek API的JavaFX代码生成研究与实践
+
+理由：
+- 明确指出了使用的AI工具（DeepSeek API）
+- 明确了应用场景（JavaFX）
+- 体现了研究与实践相结合
+- 简洁明了，符合学术报告风格
+- 长度适中，适合作为报告标题
+
+
+

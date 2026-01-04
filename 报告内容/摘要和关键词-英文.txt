@@ -1,0 +1,8 @@
+Abstract
+
+With the rapid development of artificial intelligence technology, AI-assisted programming has become an important means to improve software development efficiency. This research takes JavaFX graphical interface development as an application scenario to explore the application of code generation technology based on DeepSeek API in desktop application development. The research designs and implements a Gobang (Five in a Row) game system, integrating DeepSeek API to realize AI code generation functionality. By designing structured Prompt templates, the effectiveness of AI in generating JavaFX interface code and event handling logic is verified. Experimental results show that DeepSeek API can generate Java code that meets requirements, with good code quality, readability, and logical completeness. At the same time, the research also found that AI-generated code has certain limitations and requires manual review and optimization. This research provides a practical case for the application of AI-assisted programming in GUI development, verifies the feasibility and practicality of DeepSeek API in code generation tasks, and provides reference for subsequent related research.
+
+Keywords: AI-Assisted Programming; DeepSeek API; JavaFX; Code Generation; Prompt Engineering
+
+
+
